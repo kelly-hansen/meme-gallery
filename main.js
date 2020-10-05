@@ -9,7 +9,6 @@ var imageUrls = [
 ];
 
 addImageButton.addEventListener('click', function() {
-  console.log(imageUrlInput.value);
   if(imageUrlInput.value !== "") {
     imageUrls.push(imageUrlInput.value);
     imageUrlInput.value = "";
@@ -19,7 +18,7 @@ addImageButton.addEventListener('click', function() {
 
 function updateGallery() {
   gallery.innerHTML = "";
-  for (let i = 0; i < (imageUrls.length); i++) {
+  for (let i = 0; i < imageUrls.length; i++) {
     var imageElement = document.createElement('img');
     imageElement.className = 'gallery-image';
     imageElement.src = imageUrls[i];
